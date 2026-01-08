@@ -17,6 +17,14 @@
     <meta name="twitter:title" content="Psicólogo André Duarte - Terapia Integrativa">
     <meta name="twitter:description" content="Terapia para ansiedade, trauma e esgotamento emocional com abordagens como EMDR, Teoria Polivagal e IFS.">
     
+    <!-- DNS prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
     <title>Psicólogo André Duarte - Terapia Integrativa | Ansiedade, Trauma e Regulação Emocional</title>
 
     <!-- Google Fonts: Cormorant Garamond (serif elegante) + Segoe UI fallback -->
@@ -41,11 +49,13 @@
       "name": "André Duarte",
       "url": "https://andreduartepsicologo.com.br",
       "telephone": "+5521999999999",
+      "email": "contato@andreduartepsicologo.com.br",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Barra da Tijuca",
         "addressLocality": "Rio de Janeiro",
         "addressRegion": "RJ",
+        "postalCode": "22630-000",
         "addressCountry": "BR"
       },
       "areaServed": "BR",
@@ -56,9 +66,17 @@
         "@type": "Service",
         "name": "Terapia Psicológica",
         "description": "Atendimento para ansiedade, trauma, esgotamento emocional e regulação emocional"
-      }
+      },
+      "openingHours": [
+        "Mo-Fr 08:00-20:00"
+      ],
+      "paymentAccepted": ["Dinheiro", "PIX", "Transferência bancária", "Cartão de crédito/débito"]
     }
     </script>
+    
+    <!-- Política de Privacidade -->
+    <link rel="canonical" href="https://andreduartepsicologo.com.br">
+    <meta name="theme-color" content="#0B2A41">
 </head>
 <body>
 
@@ -163,14 +181,14 @@
         <div class="container">
             <h2 id="contato-titulo" class="mb-4 text-center">Entre em Contato</h2>
             <div class="text-center mb-4">
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5521999999999" target="_blank" class="text-white fw-bold" aria-label="Contate via WhatsApp">Clique aqui para agendar</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5521999999999" target="_blank" class="text-white fw-bold" aria-label="Contate via WhatsApp">+55 (21) 99999-9999</a></p>
                 <p><strong>Email:</strong> <a href="mailto:contato@andreduartepsicologo.com.br" class="text-white fw-bold" aria-label="Envie um e-mail">contato@andreduartepsicologo.com.br</a></p>
-                <p><strong>Local:</strong> Barra da Tijuca, Rio de Janeiro – RJ</p>
+                <p><strong>Local:</strong> Barra da Tijuca, Rio de Janeiro – RJ, CEP: 22630-000</p>
                 <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, 8h às 20h</p>
             </div>
 
-            <!-- Formulário (substitua action="" quando tiver backend ou serviço como Formspree) -->
-            <form class="row justify-content-center" action="https://formspree.io/f/seu-form-id" method="POST">
+            <!-- Formulário Formspree -->
+            <form class="row justify-content-center" action="https://formspree.io/f/xyour-form-id" method="POST">
                 <div class="col-md-6 mb-3">
                     <label for="nome" class="form-label visually-hidden">Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required aria-label="Digite seu nome">
@@ -181,7 +199,7 @@
                 </div>
                 <div class="col-12 mb-3">
                     <label for="mensagem" class="form-label visually-hidden">Mensagem</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Mensagem (opcional)" aria-label="Digite sua mensagem"></textarea>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Mensagem (opcional)" aria-label="Digite sua mensagem" required></textarea>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn" aria-label="Enviar formulário">Enviar Mensagem</button>
@@ -194,14 +212,85 @@
     <footer class="text-center py-3" role="contentinfo">
         <p>&copy; <span id="current-year">2026</span> Psicólogo André Duarte. Todos os direitos reservados. CRP 05/71020</p>
         <p>Desenvolvido com foco em acessibilidade e privacidade</p>
+        <p><a href="privacidade.html" class="text-white" style="text-decoration: underline;">Política de Privacidade</a></p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Script para atualizar ano automaticamente -->
+    <!-- Script para atualizar ano automaticamente, realce de seção ativa e animações -->
     <script>
+        // Atualiza ano automaticamente
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Realce da seção ativa na navegação
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            function highlightActiveSection() {
+                let index = sections.length;
+                
+                while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+                
+                navLinks.forEach((link) => {
+                    link.classList.remove('active');
+                });
+                
+                if (index >= 0) {
+                    const activeLink = document.querySelector(`a[href="#${sections[index].id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+            
+            window.addEventListener('scroll', highlightActiveSection);
+            
+            // Adiciona validação de formulário
+            const form = document.querySelector('form[action*="formspree"]');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    const name = document.getElementById('nome').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('mensagem').value.trim();
+                    
+                    if (!name || !email || !message) {
+                        e.preventDefault();
+                        alert('Por favor, preencha todos os campos obrigatórios.');
+                        return false;
+                    }
+                    
+                    // Validação de email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        e.preventDefault();
+                        alert('Por favor, insira um e-mail válido.');
+                        return false;
+                    }
+                });
+            }
+            
+            // Animação fade-in ao rolar a página
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Aplica a animação fade-in aos elementos
+            document.querySelectorAll('.service-card, .testimonial-card, .hero, h2, .lead, p').forEach(el => {
+                el.classList.add('fade-in-element');
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
 </html>
