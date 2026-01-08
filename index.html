@@ -81,42 +81,42 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" role="navigation" aria-label="Navegação principal">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="Página inicial">
-                <img src="logo.png" alt="Logo de André Duarte Psicólogo" class="logo me-2" loading="lazy">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.png" alt="André Duarte Psicólogo - Logo" class="logo me-2">
                 <div class="brand-text">
                     <span class="name-andre">André</span><span class="name-duarte"> Duarte</span>
                     <div class="credentials">Psicólogo CRP 05/71020</div>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre" aria-label="Sobre Mim">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos" aria-label="Serviços">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depoimentos" aria-label="Depoimentos">Depoimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato" aria-label="Contato">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" aria-label="Seção de boas-vindas">
+    <header class="hero">
         <div class="container">
             <h1>Bem-vindo à Terapia Integrativa</h1>
             <p>Atendimento para ansiedade, trauma e bem-estar emocional. Presencial na Barra da Tijuca ou online.</p>
-            <a href="http://www.google.com/url?q=http%3A%2F%2Fwa.me%2Fmessage%2FNNWXTQIGQWVBC1&sa=D&sntz=1&usg=AOvVaw3N9wWgWzZB7kbNyTmeu1p_" target="_blank" class="btn btn-primary" aria-label="Agendar sessão de terapia">Agende uma Sessão</a>
+            <a href="http://www.google.com/url?q=http%3A%2F%2Fwa.me%2Fmessage%2FNNWXTQIGQWVBC1&sa=D&sntz=1&usg=AOvVaw3N9wWgWzZB7kbNyTmeu1p_" target="_blank" class="btn btn-primary">Agende uma Sessão</a>
         </div>
-    </section>
+    </header>
 
     <!-- Sobre Mim -->
-    <section id="sobre" class="py-5" aria-labelledby="sobre-titulo">
+    <section id="sobre">
         <div class="container">
-            <h2 id="sobre-titulo" class="mb-4">Sobre Mim</h2>
+            <h2 class="mb-4">Sobre Mim</h2>
             <p class="lead">Sou André Duarte, psicólogo registrado no CRP 05/71020, especializado em abordagens integrativas como EMDR, Teoria Polivagal e IFS. Minha prática clínica é guiada pela escuta profunda, pela ciência psicológica contemporânea e pelo respeito aos tempos subjetivos de cada pessoa.</p>
             <p>Trabalho com adultos e adolescentes, oferecendo apoio em questões como ansiedade, trauma, esgotamento emocional, autoestima e relações familiares — sempre com ética, confidencialidade e sensibilidade.</p>
             <!-- Descomente quando tiver sua foto -->
@@ -125,94 +125,84 @@
     </section>
 
     <!-- Serviços -->
-    <section id="servicos" class="py-5" aria-labelledby="servicos-titulo">
+    <section id="servicos">
         <div class="container">
-            <h2 id="servicos-titulo" class="mb-4 text-center">Serviços</h2>
+            <h2 class="mb-4 text-center">Serviços</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="service-card" role="region" aria-labelledby="servico-ansiedade">
-                        <h3 id="servico-ansiedade">Terapia para Ansiedade</h3>
-                        <p>Técnicas baseadas em evidências para gerenciar o estresse, reduzir a hiperatividade mental e promover calma duradoura. Utilizo abordagens como mindfulness, TCC e técnicas de regulação emocional.</p>
+                    <div class="service-card">
+                        <h3>Terapia para Ansiedade</h3>
+                        <p>Técnicas baseadas em evidências para gerenciar o estresse, reduzir a hiperatividade mental e promover calma duradoura.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card" role="region" aria-labelledby="servico-trauma">
-                        <h3 id="servico-trauma">Processamento de Trauma</h3>
-                        <p>Abordagens como EMDR e Teoria Polivagal para integrar e superar experiências difíceis com segurança e estabilidade emocional. Trabalho com trauma simples e complexo.</p>
+                    <div class="service-card">
+                        <h3>Processamento de Trauma</h3>
+                        <p>Abordagens como EMDR e Teoria Polivagal para integrar e superar experiências difíceis com segurança e estabilidade emocional.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card" role="region" aria-labelledby="servico-online">
-                        <h3 id="servico-online">Terapia Online</h3>
-                        <p>Consultas remotas seguras, com o mesmo compromisso clínico e acolhimento das sessões presenciais. Atendimento flexível para diferentes horários e regiões do Brasil.</p>
+                    <div class="service-card">
+                        <h3>Terapia Online</h3>
+                        <p>Consultas remotas seguras, com o mesmo compromisso clínico e acolhimento das sessões presenciais.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Depoimentos -->
-    <section id="depoimentos" class="py-5" aria-labelledby="depoimentos-titulo">
+    <!-- Depoimentos -->
+    <section id="depoimentos">
         <div class="container">
-            <h2 id="depoimentos-titulo" class="mb-4 text-center">O Que Dizem os Pacientes</h2>
+            <h2 class="mb-4 text-center">O Que Dizem os Pacientes</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <blockquote>
-                            <p>"A terapia com André mudou minha vida. Encontrei ferramentas reais para lidar com minha ansiedade e pude reconstruir minha autoestima. A abordagem integrativa me ajudou a compreender minhas emoções e encontrar equilíbrio emocional."</p>
-                            <footer class="blockquote-footer">— Maria S., paciente</footer>
-                        </blockquote>
-                    </div>
+                    <blockquote>
+                        "A terapia com André mudou minha vida. Encontrei ferramentas reais para lidar com minha ansiedade."
+                        <footer>— Paciente anônimo</footer>
+                    </blockquote>
                 </div>
                 <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <blockquote>
-                            <p>"Profissional extremamente atencioso, ético e eficaz. Através da terapia, pude processar traumas do passado e desenvolver estratégias de coping eficazes. Recomendo com total confiança."</p>
-                            <footer class="blockquote-footer">— João R., paciente</footer>
-                        </blockquote>
-                    </div>
+                    <blockquote>
+                        "Profissional extremamente atencioso, ético e eficaz. Recomendo com total confiança."
+                        <footer>— Paciente anônimo</footer>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="text-white py-5" aria-labelledby="contato-titulo">
+    <section id="contato" class="text-white">
         <div class="container">
-            <h2 id="contato-titulo" class="mb-4 text-center">Entre em Contato</h2>
+            <h2 class="mb-4 text-center">Entre em Contato</h2>
             <div class="text-center mb-4">
-                <p><strong>WhatsApp:</strong> <a href="http://www.google.com/url?q=http%3A%2F%2Fwa.me%2Fmessage%2FNNWXTQIGQWVBC1&sa=D&sntz=1&usg=AOvVaw3N9wWgWzZB7kbNyTmeu1p_" target="_blank" class="text-white fw-bold" aria-label="Contate via WhatsApp">+55 (21) 99999-9999</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contato@andreduartepsicologo.com.br" class="text-white fw-bold" aria-label="Envie um e-mail">contato@andreduartepsicologo.com.br</a></p>
-                <p><strong>Local:</strong> Barra da Tijuca, Rio de Janeiro – RJ, CEP: 22630-000</p>
-                <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, 8h às 20h</p>
+                <p><strong>WhatsApp:</strong> <a href="http://www.google.com/url?q=http%3A%2F%2Fwa.me%2Fmessage%2FNNWXTQIGQWVBC1&sa=D&sntz=1&usg=AOvVaw3N9wWgWzZB7kbNyTmeu1p_" target="_blank" class="text-white fw-bold">Clique aqui para agendar</a></p>
+                <p><strong>Email:</strong> contato@andreduartepsicologo.com.br</p>
+                <p><strong>Local:</strong> Barra da Tijuca, Rio de Janeiro – RJ</p>
             </div>
 
-            <!-- Formulário Formspree -->
-            <form class="row justify-content-center" action="https://formspree.io/f/xyour-form-id" method="POST">
+            <!-- Formulário (substitua action="" quando tiver backend ou serviço como Formspree) -->
+            <form class="row justify-content-center" action="https://formspree.io/f/seu-form-id" method="POST">
                 <div class="col-md-6 mb-3">
-                    <label for="nome" class="form-label visually-hidden">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required aria-label="Digite seu nome">
+                    <input type="text" class="form-control" name="nome" placeholder="Seu Nome" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="email" class="form-label visually-hidden">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu E-mail" required aria-label="Digite seu e-mail">
+                    <input type="email" class="form-control" name="email" placeholder="Seu E-mail" required>
                 </div>
                 <div class="col-12 mb-3">
-                    <label for="mensagem" class="form-label visually-hidden">Mensagem</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Mensagem (opcional)" aria-label="Digite sua mensagem" required></textarea>
+                    <textarea class="form-control" name="mensagem" rows="3" placeholder="Mensagem (opcional)"></textarea>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn" aria-label="Enviar formulário">Enviar Mensagem</button>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
                 </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-3" role="contentinfo">
-        <p>&copy; <span id="current-year">2026</span> Psicólogo André Duarte. Todos os direitos reservados. CRP 05/71020</p>
-        <p>Desenvolvido com foco em acessibilidade e privacidade</p>
-        <p><a href="privacidade.html" class="text-white" style="text-decoration: underline;">Política de Privacidade</a></p>
+    <footer class="text-center">
+        <p>&copy; 2026 Psicólogo André Duarte. Todos os direitos reservados. CRP 05/71020</p>
     </footer>
 
     <!-- Bootstrap JS -->
