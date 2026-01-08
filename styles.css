@@ -10,112 +10,66 @@
     --moss: #5A6B54;
     --text: var(--black);
     --body-bg: var(--white);
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --transition: all 0.3s ease;
 }
 
 /* ===== Estilo Geral ===== */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     color: var(--text);
     background-color: var(--body-bg);
+    scroll-behavior: smooth;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     color: var(--navy);
-    line-height: 1.2;
 }
 
 /* ===== Navbar ===== */
 .navbar {
     background-color: var(--white);
-    box-shadow: var(--shadow);
-    padding: 0.8rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-
 .name-andre {
     font-weight: 700;
     color: var(--navy);
 }
-
 .name-duarte {
     font-weight: 600;
     color: var(--gold);
 }
-
 .credentials {
     font-size: 0.8rem;
     color: var(--moss);
     margin-top: 2px;
 }
-
 .nav-link {
     color: var(--navy) !important;
     font-weight: 500;
     transition: color 0.2s;
-    padding: 0.5rem 1rem !important;
 }
-
-.nav-link.active {
+.nav-link:hover {
     color: var(--gold) !important;
-    font-weight: 600;
-    position: relative;
-}
-
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background-color: var(--gold);
-    border-radius: 2px;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
 }
 
 /* ===== Hero Section ===== */
 .hero {
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     text-align: center;
 }
-
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: fadeInUp 0.8s ease;
 }
-
 .hero p {
     color: var(--burgundy);
     max-width: 700px;
     margin: 0 auto 1.5rem;
     font-size: 1.1rem;
 }
-
 .btn-primary {
     background-color: var(--gold);
     border: none;
@@ -123,39 +77,24 @@ h1, h2, h3, h4 {
     font-weight: 600;
     padding: 0.6rem 1.8rem;
     border-radius: 30px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    display: inline-block;
-    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .btn-primary:hover {
     background-color: #c19e2f;
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
-    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 /* ===== Seções ===== */
-section {
-    padding: 4rem 0;
-}
-
-section.py-5 {
-    padding: 3rem 0;
-}
-
 section#sobre,
 section#depoimentos {
     background-color: var(--white);
 }
-
 section#servicos,
 section#contato {
     background-color: var(--light-gray);
 }
-
 section#contato {
     background-color: var(--navy);
 }
@@ -167,36 +106,18 @@ section#contato {
     padding: 1.5rem;
     height: 100%;
     border: 1px solid rgba(11, 42, 65, 0.1);
-    transition: var(--transition);
-    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
 }
-
 .service-card:hover {
     border-color: var(--gold);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
-
 .service-card h3 {
     color: var(--burgundy);
     margin-bottom: 0.8rem;
 }
 
 /* ===== Depoimentos ===== */
-.testimonial-card {
-    background: var(--white);
-    border-radius: 10px;
-    padding: 1.5rem;
-    height: 100%;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.testimonial-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
 blockquote {
     font-style: italic;
     color: var(--text);
@@ -204,15 +125,11 @@ blockquote {
     border-left: 3px solid var(--gold);
     margin: 0;
 }
-
-blockquote p {
-    margin-bottom: 0.8rem;
-}
-
-.blockquote-footer {
+blockquote footer {
+    display: block;
+    margin-top: 0.5rem;
     color: var(--moss);
     font-size: 0.9rem;
-    font-style: normal;
 }
 
 /* ===== Contato ===== */
@@ -221,31 +138,13 @@ blockquote p {
 #contato a {
     color: var(--white) !important;
 }
-
 #contato a:hover {
     text-decoration: underline;
 }
-
 #contato .form-control {
     border-radius: 8px;
     margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    padding: 0.75rem 1rem;
 }
-
-#contato .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-#contato .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-color: var(--gold);
-    color: var(--white);
-    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
-}
-
 #contato .btn {
     background-color: var(--gold);
     color: var(--navy);
@@ -253,14 +152,10 @@ blockquote p {
     border: none;
     padding: 0.6rem 1.8rem;
     border-radius: 30px;
-    transition: var(--transition);
 }
-
 #contato .btn:hover {
     background-color: #c19e2f;
     color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 /* ===== Footer ===== */
@@ -268,7 +163,6 @@ footer {
     background-color: var(--navy);
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
-    padding: 1.5rem 0;
 }
 
 /* ===== Logo ===== */
@@ -277,131 +171,13 @@ footer {
     object-fit: contain;
 }
 
-/* ===== Animações ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animação para cards ao passar o mouse */
-.service-card,
-.testimonial-card {
-    transition: var(--transition);
-}
-
-/* Animação de scroll suave para links internos */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Melhoria na acessibilidade para foco */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--gold);
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-
-/* Efeito de carregamento para imagens */
-img[loading="lazy"] {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-img[loading="lazy"].loaded {
-    opacity: 1;
-}
-
-/* Animação de fade-in ao rolar a página */
-.fade-in-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in-element.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== Acessibilidade ===== */
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-}
-
-/* Foco visível para acessibilidade */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--gold);
-    outline-offset: 2px;
-}
-
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {
-    .hero {
-        padding: 3rem 1rem;
-    }
-    
     .hero h1 {
         font-size: 2rem;
     }
-    
     .name-andre,
     .name-duarte {
         font-size: 1.35rem;
-    }
-    
-    section {
-        padding: 2.5rem 0;
-    }
-    
-    .service-card,
-    .testimonial-card {
-        margin-bottom: 1.5rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.1rem;
-    }
-    
-    .credentials {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero {
-        padding: 2.5rem 1rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .btn-primary {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
     }
 }
