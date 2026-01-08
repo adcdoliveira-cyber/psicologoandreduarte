@@ -19,6 +19,7 @@ body {
     background-color: var(--body-bg);
     scroll-behavior: smooth;
     line-height: 1.6;
+    font-display: swap; /* Otimização para fontes */
 }
 
 h1, h2, h3, h4 {
@@ -180,4 +181,24 @@ footer {
     .name-duarte {
         font-size: 1.35rem;
     }
+    
+    /* Otimização para dispositivos móveis */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* ===== Otimizações de desempenho ===== */
+/* Reduz o uso de regras CSS que causam repaints e reflows */
+* {
+    box-sizing: border-box;
+}
+
+/* Otimiza animações */
+.nav-link,
+.btn-primary,
+.service-card {
+    will-change: auto;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
