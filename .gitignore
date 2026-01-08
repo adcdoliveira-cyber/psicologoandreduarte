@@ -1,1 +1,1 @@
-Nothing needs to be added to .gitignore since the changes only include source files (HTML, CSS) and an image file (favicon.ico), which should not be ignored according to the rules.
+(privacidade.html is just an HTML file, which is source code, and the other changes are standard web files - no build artifacts, dependencies, or temp files to ignore)
