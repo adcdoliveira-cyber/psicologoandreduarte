@@ -1,0 +1,1 @@
+Nothing needs to be added to .gitignore since the changes only include source files (HTML, CSS) and an image file (favicon.ico), which should not be ignored according to the rules.
