@@ -38,8 +38,7 @@
     <!-- Seu CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -159,13 +158,13 @@
                 <div class="col-md-6">
                     <blockquote>
                         "A terapia com André mudou minha vida. Encontrei ferramentas reais para lidar com minha ansiedade."
-                        <footer>— Paciente anônimo</footer>
+                        <div>— Paciente anônimo</div>
                     </blockquote>
                 </div>
                 <div class="col-md-6">
                     <blockquote>
                         "Profissional extremamente atencioso, ético e eficaz. Recomendo com total confiança."
-                        <footer>— Paciente anônimo</footer>
+                        <div>— Paciente anônimo</div>
                     </blockquote>
                 </div>
             </div>
@@ -183,15 +182,15 @@
             </div>
 
             <!-- Formulário (substitua action="" quando tiver backend ou serviço como Formspree) -->
-            <form class="row justify-content-center" action="https://formspree.io/f/seu-form-id" method="POST">
+            <form class="row justify-content-center" action="#" method="POST">
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" name="nome" placeholder="Seu Nome" required>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Seu Nome" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Seu E-mail" required>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" required>
                 </div>
                 <div class="col-12 mb-3">
-                    <textarea class="form-control" name="mensagem" rows="3" placeholder="Mensagem (opcional)"></textarea>
+                    <textarea class="form-control" name="mensagem" id="mensagem" rows="3" placeholder="Mensagem (opcional)"></textarea>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn">Enviar Mensagem</button>
@@ -202,7 +201,7 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <p>&copy; 2026 Psicólogo André Duarte. Todos os direitos reservados. CRP 05/71020</p>
+        <p>&copy; <span id="current-year">2026</span> Psicólogo André Duarte. Todos os direitos reservados. CRP 05/71020</p>
     </footer>
 
     <!-- Bootstrap JS -->
@@ -238,7 +237,7 @@
             window.addEventListener('scroll', highlightActiveSection);
             
             // Adiciona validação de formulário
-            const form = document.querySelector('form[action*="formspree"]');
+            const form = document.querySelector('form');
             if (form) {
                 form.addEventListener('submit', function(e) {
                     const name = document.getElementById('nome').value.trim();
